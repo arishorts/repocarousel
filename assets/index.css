@@ -8,17 +8,26 @@ html {
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: rgb(18, 18, 18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
 
 a {
   display: inline-block;
   background-color: aquamarine;
-  width: 100px;
-  height: 100px;
+  width: 70vw;
+  height: 20vh;
+  border-radius: 3rem;
 }
 
 .carousel {
   overflow: hidden;
-  max-width: 600px;
+  max-width: 60vw;
   position: relative;
 }
 
@@ -29,16 +38,26 @@ a {
 
 .carousel .carousel__item img {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   height: auto;
 }
 
 .carousel .carousel__item--visible {
   display: block;
   animation: fadeVisibility 0.5s;
+  width: 60vw;
+  position: relative;
 }
 
+.carousel__item--text {
+  position: absolute;
+  text-align: center;
+  font-size: 6rem;
+  width: 100%;
+}
+/*
 .carousel .carousel__actions {
+  z-index: 99;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -46,8 +65,9 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
+*/
 
-.carousel .carousel__actions button {
+button {
   border-radius: 50px;
   border: 0;
   font-weight: bold;
@@ -56,12 +76,12 @@ a {
   height: 40px;
 }
 
-.carousel .carousel__actions button#carousel__button--prev {
-  margin-left: 20px;
+button#carousel__button--prev {
+  margin-right: 20px;
 }
 
-.carousel .carousel__actions button#carousel__button--next {
-  margin-right: 20px;
+button#carousel__button--next {
+  margin-left: 20px;
 }
 
 @keyframes fadeVisibility {
