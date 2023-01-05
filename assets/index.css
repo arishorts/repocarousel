@@ -82,10 +82,7 @@ button#carousel__button--next {
   }
 
   .carousel .carousel__item--visible {
-    display: block;
-    animation: fadeVisibility 0.5s;
     width: 60vw;
-    position: relative;
   }
 
   .carousel__item--text {
