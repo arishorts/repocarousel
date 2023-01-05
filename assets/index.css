@@ -20,7 +20,6 @@ body {
 a {
   display: inline-block;
   background-color: aquamarine;
-  width: 70vw;
   height: 20vh;
   border-radius: 3rem;
 }
@@ -34,12 +33,6 @@ a {
 .carousel .carousel__item,
 .carousel .carousel__item--hidden {
   display: none;
-}
-
-.carousel .carousel__item img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
 }
 
 .carousel .carousel__item--visible {
@@ -80,5 +73,30 @@ button#carousel__button--next {
   100% {
     opacity: 1;
     transform: opacity linear;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    min-width: 60vw;
+  }
+
+  .carousel .carousel__item--visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+    width: 60vw;
+    position: relative;
+  }
+
+  .carousel__item--text {
+    font-size: 3rem;
+  }
+
+  button#carousel__button--prev {
+    margin-right: 10px;
+  }
+
+  button#carousel__button--next {
+    margin-left: 10px;
   }
 }
